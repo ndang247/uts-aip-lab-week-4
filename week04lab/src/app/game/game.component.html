@@ -1,0 +1,13 @@
+<h2>Technology guessing game</h2>
+<p>Status: {{ status }}</p>
+<p> Next guess: <input type="text" [(ngModel)]="guess"> </p>
+<p><button (click)="check()">Check</button></p>
+
+<div *ngIf='answers.length > 0'>
+    <ol>
+        <li *ngFor="let item of answers">
+            {{ item }}
+        </li>
+    </ol>
+</div>
+
